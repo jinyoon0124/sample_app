@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'static_pages/about'#when added, it rousts a GET request for /static_pages/about to about action in the corresponding Controller
 
+  get 'static_pages/contact'
+
   root 'static_pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
