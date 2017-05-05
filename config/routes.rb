@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'#automatically created when creating controller with argument
+  #get 'static_pages/home'#automatically created when creating controller with argument
+  #get 'static_pages/help'#automatically created when creating controller with argument
+  #get 'static_pages/about'#when added, it rousts a GET request for /static_pages/about to about action in the corresponding Controller
+  #get 'static_pages/contact'
+  #################################################
+  #we can change above codes as below
+  #################################################
 
-  get 'static_pages/help'#automatically created when creating controller with argument
-
-  get 'static_pages/about'#when added, it rousts a GET request for /static_pages/about to about action in the corresponding Controller
-
-  get 'static_pages/contact'
+  get '/help', to: 'static_pages#help'
+  get '/about', to: 'static_pages#about'
+  get '/contact', to: 'static_pages#contact'
 
   root 'static_pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
